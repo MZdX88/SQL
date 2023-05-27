@@ -1,0 +1,29 @@
+CREATE TABLE user_lan (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `user_id` int NOT NULL,
+  `langue_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `utilisateur_fk` FOREIGN KEY (`user_id`) REFERENCES `utilisateur` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `langue_fk` FOREIGN KEY (`langue_id`) REFERENCES `langue` (`id`) ON DELETE CASCADE
+)
+
+
+
+1 1
+1 N 
+N N  table relation
+
+
+
+
+git add .
+git commit -m 'add some sql script, create'
+git push,
+
+
+git pull
+git push,
+
+show databases;
+use foodly;
+select * from utilisateur  
