@@ -8,14 +8,6 @@ CREATE TABLE user_lan (
 )
 
 
-
-1 1
-1 N 
-N N  table relation
-
-
-
-
 git add .
 git commit -m 'add some sql script, create'
 git push,
@@ -27,3 +19,16 @@ git push,
 show databases;
 use foodly;
 select * from utilisateur  
+
+
+relation type:
+one to one,
+one to many,
+many to many,-> relationship table(clé étrangère)
+
+select film.synopsis,pays_de_sortie.nom from film_pays_de_sortie 
+  join film on film.id = film_pays_de_sortie.film_id 
+  join pays_de_sortie on pays_de_sortie.id = film_pays_de_sortie.pays_de_sortie_id;
+
+tjrs commencer par la table de liaison 
+
